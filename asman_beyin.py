@@ -4,7 +4,7 @@ import os
 import config
 
 def model_olustur():
-    print("\n🧠 ASMAN Yapay Zeka Modeli İnşa Ediliyor...")
+    print("\n ASMAN Yapay Zeka Modeli İnşa Ediliyor...")
     
     # --- GÖRSEL GİRİŞ (Uydu Görüntüsü) ---
     img_input = Input(shape=(256, 256, 1), name="Uydu_Goruntusu")
@@ -29,12 +29,12 @@ def model_olustur():
     
     model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
     
-    print("✅ Model Mimarisi Oluşturuldu!")
+    print(" Model Mimarisi Oluşturuldu!")
     return model
 
 if __name__ == "__main__":
     # GPU kontrolü
-    print(f"🔥 Aktif GPU Sayısı: {len(tf.config.list_physical_devices('GPU'))}")
+    print(f" Aktif GPU Sayısı: {len(tf.config.list_physical_devices('GPU'))}")
     
     model = model_olustur()
     model.summary()
